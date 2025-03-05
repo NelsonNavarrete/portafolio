@@ -14,3 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop;
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let menuToggle = document.querySelector(".menu-toggle");
+    let menuLinks = document.querySelector(".menu-links");
+
+    menuToggle.addEventListener("click", function() {
+        menuLinks.classList.toggle("active");
+    });
+});

@@ -26,6 +26,13 @@ h3 {
     font-size: 24px;
 }
 
+h4 {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #24503b;
+
+}
 p {
     font-size: 16px;
 }
@@ -70,14 +77,6 @@ body {
     z-index: 1000;
 }
 
-.menu-fixed {
-    border-radius: 0;
-    position: fixed;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s ease-in-out;
-}
-
-
 .menu a {
     text-decoration: none;
     color: rgb(73, 73, 73);
@@ -88,9 +87,18 @@ body {
     border-bottom: 2px solid transparent;
 }
 
+.menu-fixed {
+    border-radius: 0;
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-in-out;
+}
+
+
 .menu a:hover {
     border-bottom: 2px solid #24503b;
 }
+
 
 .acercaDe, .conocimientos, .programas{
     width: 100%;
@@ -122,12 +130,25 @@ body {
 .acercaDe-texto h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    text-align: left;
+    position: relative; 
+    display: inline-block;
+}
+
+.acercaDe h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Se ajusta al ancho del texto */
+    height: 4px;
+    background-color: #24503b;
+    margin-top: 8px;
+    border-radius: 2px;
 }
 
 .acercaDe-texto p {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 600px; /* Para que el texto no sea demasiado ancho */
+    max-width: 600px;
 }
 
 .acercaDe-imagen {
@@ -153,7 +174,9 @@ body {
     text-align: center;
 }
 
-.conocimientos h2::after {
+.conocimientos h2::after,
+.programas h2::after,
+.portafolio h2::after {
     content: "";
     display: block;
     width: 160px;
@@ -227,15 +250,25 @@ body {
 
 .programasContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));    
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     background: #f5f5f5;
     padding: 24px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    list-style: none; /* Elimina los estilos de lista */
+    gap: 20px;
 }
 
-.programasContainer img {
+.programa-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.programa-item img {
     width: 80%;
     max-width: 100px;
     height: auto;
@@ -243,9 +276,17 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.programasContainer img:hover {
+.programa-item img:hover {
     transform: scale(1.1);
 }
+
+.programa-item h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #24503b;
+}
+
 
 .portafolio {
     text-align: center; /* Centra el texto */
@@ -356,3 +397,155 @@ body {
 }
 
 
+
+
+/* RESPONSIVE: Ajustes para pantallas menores a 768px */
+
+    @media (max-width: 768px) {
+        .menu {
+            position: fixed; /* Mantiene el menú siempre visible en la parte superior */
+            top: 0;
+            left: 0;
+            width: 90%;
+            background: white;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        .acercaDe, .conocimientos, .programas, .portafolio {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box; /* Asegurar que el padding y border no sobrepasen el ancho */
+            overflow-x: hidden;
+        }
+    
+        /* Ajuste para evitar que el contenido quede oculto detrás del menú */
+        body {
+            padding-top: 0px; /* Empuja el contenido hacia abajo */
+        }
+    
+        .menu-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px 0;
+            overflow-x: hidden;
+        }
+
+        .menu-links.active {
+            display: flex;
+        }
+    
+        .menu-links a {
+            padding: 12px;
+            display: block;
+            text-decoration: none;
+            color: rgb(73, 73, 73);
+            font-weight: bold;
+        }
+    
+        .menu-links a:hover {
+            background: #f4f4f4;
+        }
+    
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: rgb(73, 73, 73);
+            display: block;
+        }
+
+        
+    .menu a {
+        margin: 6px 0;
+        display: block;
+        text-align: center;
+    }
+
+    /* Ajuste del contenido general */
+    .content {
+        width: 95%;
+        padding: 24px;
+    }
+
+    /* Ajuste de la sección "Acerca de mí" */
+    .acercaDe-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .acercaDe-texto {
+        width: 100%;
+    }
+
+    .acercaDe-imagen img {
+        width: 180px;
+        border: 6px solid #24503b;
+    }
+
+    /* Ajuste de la sección "Conocimientos" */
+    .conocimientos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conocimiento-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* Ajuste de la sección "Programas" */
+    .programasContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        padding: 16px;
+    }
+
+    .programa-item img {
+        width: 100px;
+    }
+
+    /* Ajuste de la sección "Portafolio" */
+    .portafolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portafolio-card {
+        max-width: 100%;
+    }
+
+    /* Ajuste del footer */
+    .footer {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* Ocultar el botón hamburguesa en escritorio */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    }

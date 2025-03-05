@@ -15,20 +15,29 @@
     <div class="content">
         <header>
             <nav class="menu">
-                <a href="#acercaDe" >Acerca de mí</a>
-                <a href="#conocimientos">Conocimientos</a>
-                <a href="#programas">Experiencia</a>
-                <a href="#portafolio">Portafolio</a>
-                <a href="#contacto">Contacto</a>
+                <button class="menu-toggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu-links">
+                    <a href="#acercaDe">Acerca de mí</a>
+                    <a href="#conocimientos">Conocimientos</a>
+                    <a href="#programas">Experiencia</a>
+                    <a href="#portafolio">Portafolio</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
             </nav>
         </header>
+        
+        
 
         <div class="acercaDe" id="acercaDe">
             <div class="acercaDe-container">
                 <div class="acercaDe-texto">
                     <h2>Acerca de mí</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus consectetur quod, tenetur ipsa quibusdam! Maiores saepe neque repellendus totam tenetur, et asperiores. Aut numquam unde neque explicabo vero nostrum.
+                        Animador 3D y Diseñador UX/UI con experiencia en la creación de contenido digital. Especializado en diseño, animación y desarrollo de funciones interactivas aplicadas a entornos digitales.
+                        <br>
+                        <a href="assets/NelsonCV.pdf" download class="btn-descarga">Mi Curriculum <i class="fas fa-download"></i></a>
                     </p>
                 </div>
                 <div class="acercaDe-imagen">
@@ -63,18 +72,44 @@
 
         <div class="programas" id="programas">            
             <h2>Programas</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, inventore. Vero harum animi, voluptas id temporibus veniam mollitia unde perspiciatis dicta fuga soluta natus, tempore aliquam nemo quos distinctio tempora.
-            <div class="programasContainer">
-            <img src="assets/img/figma.png" alt="figma">
-            <img src="assets/img/vsc.png" alt="vsc">
-            <img src="assets/img/aftereffects.png" alt="af">
-            <img src="assets/img/illustrator.png"  alt="il">
-            <img src="assets/img/photoshop.png" alt="ps">
-            <img src="assets/img/premiere.png" alt="pm">
-            <img src="assets/img/blender.png" alt="blender">
-            <img src="assets/img/maya.png" alt="maya">
-            </div>
-    </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, inventore. Vero harum animi, voluptas id temporibus veniam mollitia unde perspiciatis dicta fuga soluta natus, tempore aliquam nemo quos distinctio tempora.</p>
+            
+            <ul class="programasContainer">
+                <li class="programa-item">
+                    <img src="assets/img/figma.png" alt="Figma">
+                    <h4>Figma</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/vsc.png" alt="Visual Studio Code">
+                    <h4>Visual Studio Code</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/aftereffects.png" alt="After Effects">
+                    <h4>After Effects</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/illustrator.png" alt="Illustrator">
+                    <h4>Illustrator</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/photoshop.png" alt="Photoshop">
+                    <h4>Photoshop</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/premiere.png" alt="Premiere">
+                    <h4>Premiere</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/maya.png" alt="Maya">
+                    <h4>Maya</h4>
+                </li>
+                <li class="programa-item">
+                    <img src="assets/img/moho.png" alt="Moho">
+                    <h4>Moho Animation</h4>
+                </li>
+            </ul>
+        </div>
+        
 
     <div class="portafolio" id="portafolio">
         <h2>Portafolio</h2>        
@@ -96,7 +131,7 @@
     
             <div class="portafolio-row">
                 <div class="portafolio-card">
-                    <img src="https://via.placeholder.com/400x250" alt="Proyecto 3">
+                    <img src="assets/img/streaming.jpg" alt="Proyecto 3">
                     <h3>Ilustraciones para Streaming</h3>
                     <p>Creación de ilustraciones personalizadas para streamers y contenido digital.</p>
                     <a href="https://www.behance.net/gallery/220524671/Twitch-Content-for-Miss_Karrot" class="btn-ver-proyecto" target="_blank">Ver proyecto</a>
