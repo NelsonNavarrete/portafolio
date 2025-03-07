@@ -138,7 +138,7 @@ body {
 .acercaDe h2::after {
     content: "";
     display: block;
-    width: 100%; /* Se ajusta al ancho del texto */
+    width: 100%;
     height: 4px;
     background-color: #24503b;
     margin-top: 8px;
@@ -227,7 +227,7 @@ body {
 
 .btn-descarga {
     display: inline-block;
-    background-color: #24503b; /* Color verde */
+    background-color: #24503b;
     color: white;
     padding: 12px 16px;
     margin-top: 24px;
@@ -236,7 +236,7 @@ body {
 }
 
 .btn-descarga:hover {
-    background-color: #1b3a2a; /* Verde más oscuro al pasar el mouse */
+    background-color: #1b3a2a;
 }
 
 
@@ -256,7 +256,7 @@ body {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    list-style: none; /* Elimina los estilos de lista */
+    list-style: none;
     gap: 20px;
 }
 
@@ -289,7 +289,7 @@ body {
 
 
 .portafolio {
-    text-align: center; /* Centra el texto */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,19 +316,19 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    max-width: 48%; /* Evita que las tarjetas sean demasiado anchas */
+    max-width: 48%;
 }
 
 .portafolio-card img {
     width: 100%;
     height: auto;
-    max-height: 240px; /* Altura máxima para mantener proporciones */
+    max-height: 240px;
     border-radius: 8px;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
-/* Responsivo: para pantallas más pequeñas */
+/* Responsivo*/
 @media (max-width: 768px) {
     .portafolio-row {
         flex-direction: column;
@@ -399,11 +399,11 @@ body {
 
 
 
-/* RESPONSIVE: Ajustes para pantallas menores a 768px */
+/* RESPONSIVE menores a 768px */
 
     @media (max-width: 768px) {
         .menu {
-            position: fixed; /* Mantiene el menú siempre visible en la parte superior */
+            position: fixed;
             top: 0;
             left: 0;
             width: 90%;
@@ -422,13 +422,12 @@ body {
         .acercaDe, .conocimientos, .programas, .portafolio {
             width: 100%;
             max-width: 100%;
-            box-sizing: border-box; /* Asegurar que el padding y border no sobrepasen el ancho */
+            box-sizing: border-box;
             overflow-x: hidden;
         }
-    
-        /* Ajuste para evitar que el contenido quede oculto detrás del menú */
+          
         body {
-            padding-top: 0px; /* Empuja el contenido hacia abajo */
+            padding-top: 0px;
         }
     
         .menu-links {
@@ -477,13 +476,11 @@ body {
         text-align: center;
     }
 
-    /* Ajuste del contenido general */
     .content {
         width: 95%;
         padding: 24px;
     }
 
-    /* Ajuste de la sección "Acerca de mí" */
     .acercaDe-container {
         flex-direction: column;
         text-align: center;
@@ -499,7 +496,6 @@ body {
         border: 6px solid #24503b;
     }
 
-    /* Ajuste de la sección "Conocimientos" */
     .conocimientos-container {
         flex-direction: column;
         align-items: center;
@@ -510,7 +506,6 @@ body {
         max-width: 320px;
     }
 
-    /* Ajuste de la sección "Programas" */
     .programasContainer {
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
@@ -521,7 +516,6 @@ body {
         width: 100px;
     }
 
-    /* Ajuste de la sección "Portafolio" */
     .portafolio-container {
         flex-direction: column;
         align-items: center;
@@ -531,7 +525,6 @@ body {
         max-width: 100%;
     }
 
-    /* Ajuste del footer */
     .footer {
         text-align: center;
         margin-left: 0;
@@ -543,7 +536,6 @@ body {
     }
 }
 
-/* Ocultar el botón hamburguesa en escritorio */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
