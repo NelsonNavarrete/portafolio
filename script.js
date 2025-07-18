@@ -33,3 +33,8 @@ document.querySelectorAll('.btn-descarga').forEach(btn => {
     });
   });
 });
+
+gtag('event', 'descarga_cv', {
+  event_category: 'Descargas',
+  event_label: 'Curriculum PDF'
+});
