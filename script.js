@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-gtag('event', 'descarga_cv', {
-  event_category: 'Descargas',
-  event_label: 'Curriculum PDF'
+document.querySelectorAll('.btn-descarga').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const label = this.textContent.includes('Curriculum') ? 'Curriculum PDF' : 'Certificaciones PDF';
+    gtag('event', 'click_descarga', {
+      'event_category': 'Descargas',
+      'event_label': label
+    });
+  });
 });
